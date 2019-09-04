@@ -4,6 +4,7 @@ Instrument data as well as the list of instrument types has been provided by [ea
 All queries are executed in the public sparql endpoint with the 'Published-Resources View'.
 ## Instruments only
 [alaska-instruments](https://alaska.eagle-i.net/sparqler/query/)
+
 [harvard-instruments](https://harvard.eagle-i.net/sparqler/query/)
 ```
 select distinct ?name
@@ -14,7 +15,8 @@ select distinct ?name
 ```
 ## Instrument to type
 [alaska-instrument-type](https://alaska.eagle-i.net/sparqler/query/)
-[harvard-instruments](https://harvard.eagle-i.net/sparqler/query/)
+
+[harvard-instrument-type](https://harvard.eagle-i.net/sparqler/query/)
 ```
 select ?name ?type_name
   where {
