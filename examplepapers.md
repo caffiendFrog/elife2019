@@ -11,17 +11,17 @@ Journal: BMC Complementary and Alternative Medicine, doi: 10.1186/s12906-016-140
 In this study, the following instruments were used: Gas Chromatography Mass Spectrometry (GC-MS) (QP-5000 GC-MS Shimadzu, Japan), ultrasonic-microwave cooperative extractor/reactor (CW-2000, China), rotary evaporator (Heidolph OB2000, VV2000, Germany), UV visible spectrophotometer (Jenway 7315, England), grinder (Moulinex model, Uno. China), balance (Radw ag, AS 220/c/2, Poland), filter paper (Machrery-Nagel, MN 617 and Whatman no.1, USA), micropipettes (Finnpipette, Finland), incubator (Nuve, Turkey), syringe filter 0.45 μm pore size (Microlab, China) and 96-well plates (Greiner bio-one, North America).
 
 ### Pieces of equipment mentioned:
-QP-5000 GC-MS Shimadzu
-CW-2000
-Heidolph OB2000
-VV2000
-Jenway 7315
-Moulinex model
-Machery-Nagel, MN 617
-Finnipipette micropipettes
-Nuve incubator
-Microlab syringe filters
-96-well plates Greiner
+QP-5000 GC-MS Shimadzu,
+CW-2000,
+Heidolph OB2000,
+VV2000,
+Jenway 7315,
+Moulinex model,
+Machery-Nagel MN 617,
+Finnipipette micropipettes,
+Nuve incubator,
+Microlab syringe filters,
+96-well plates Greiner,
 
 ## PMC6602964
 looks at activity of essential oils against larvae of a mosquito species that transmits yellow fever. I find reporting a bit questionable, in particular they don't really say what kind of statistical analysis they did, e.g. on extraction and analysis of the essential oils. 
@@ -39,10 +39,10 @@ For analysis of the constituent compounds of the selected EO, Gas chromatography
 
 
 ### Pieces of equipment mentioned:
-Clevenger apparatus
-Agilent 7890A (GC)
-HP5-MS
-Whatman no. 1 filter papers
+Clevenger apparatus,
+Agilent 7890A (GC),
+HP5-MS,
+Whatman no. 1 filter papers,
 cylindrical tubes
 
 
