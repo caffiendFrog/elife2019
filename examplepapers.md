@@ -1,10 +1,11 @@
 ## Some notes on the papers in the corpus
 (to facilitate building NLP tools)
 
-PMC5080681 -- analyses Thymus bovei essential oils (compounds, antimicrobial and antithelmintic activity) ok paper because but they only try three times to extract oil, examine antibacterial and anthelmintic activity, then get a standard deviation from there. Only use few organisms (worms) to get anthelmintic activity. No comparison to similar species. Very standard methodology (GC-MS, looking at number of colonies of bacteria etc.)
-Journal: BMC Complementary and Alternative Medicine
+## PMC5080681
+analyses Thymus bovei essential oils (compounds, antimicrobial and antithelmintic activity) ok paper because but they only try three times to extract oil, examine antibacterial and anthelmintic activity, then get a standard deviation from there. Only use few organisms (worms) to get anthelmintic activity. No comparison to similar species. Very standard methodology (GC-MS, looking at number of colonies of bacteria etc.)
+Journal: BMC Complementary and Alternative Medicine, doi: 10.1186/s12906-016-1408-2
 
-## Relevant paragraph
+# Relevant paragraph
 # Instrumentations
 
 In this study, the following instruments were used: Gas Chromatography Mass Spectrometry (GC-MS) (QP-5000 GC-MS Shimadzu, Japan), ultrasonic-microwave cooperative extractor/reactor (CW-2000, China), rotary evaporator (Heidolph OB2000, VV2000, Germany), UV visible spectrophotometer (Jenway 7315, England), grinder (Moulinex model, Uno. China), balance (Radw ag, AS 220/c/2, Poland), filter paper (Machrery-Nagel, MN 617 and Whatman no.1, USA), micropipettes (Finnpipette, Finland), incubator (Nuve, Turkey), syringe filter 0.45 μm pore size (Microlab, China) and 96-well plates (Greiner bio-one, North America).
@@ -22,10 +23,9 @@ Nuve incubator
 Microlab syringe filters
 96-well plates Greiner
 
-PMC6596282 -- this is actually a review of other papers so this might be interesting to extract some info. Somewhat systematic approach. It's about the stress reducing effects of essential oils during fish transport. E.g. tables 1 and 2 contain some interesting bits. Not much about equipment though.
-
-PMC6602964 -- looks at activity of essential oils against larvae of a mosquito species that transmits yellow fever. I find reporting a bit questionable, in particular they don't really say what kind of statistical analysis they did, e.g. on extraction and analysis of the essential oils. 
-Journal: Scientific Reports
+# PMC6602964
+looks at activity of essential oils against larvae of a mosquito species that transmits yellow fever. I find reporting a bit questionable, in particular they don't really say what kind of statistical analysis they did, e.g. on extraction and analysis of the essential oils. 
+Journal: Scientific Reports, doi: 10.1038/s41598-019-45908-3
 
 ## Relevant Paragraphs
 # Adulticidal assay
@@ -47,6 +47,6 @@ cylindrical tubes
 
 PMC6539503 -- maybe of interest because it's actually a false hit -- this is not about antimicrobial activity of plants, it's about gas and oil transportation in offshore pipelines.
 
-
+PMC6596282 -- this is actually a review of other papers so this might be interesting to extract some info. Somewhat systematic approach. It's about the stress reducing effects of essential oils during fish transport. E.g. tables 1 and 2 contain some interesting bits. Not much about equipment though.
 
 
