@@ -1,0 +1,1 @@
+EQUIPMENT_FILE_NAME = "/home/michael/PycharmProjects/elife2019/alaska-instruments"
