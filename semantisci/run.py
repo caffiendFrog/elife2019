@@ -6,6 +6,7 @@ from flask_cors import CORS, cross_origin
 def setup():
     application = Flask(__name__)
     application.register_blueprint(api, url_prefix = '/api/')
+    application.config['SECRET_KEY'] = 'Guess what? Chicken butt.'
     CORS(application)
     return application
 

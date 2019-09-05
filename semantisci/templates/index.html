@@ -13,7 +13,7 @@
                 font-size: 13px;
                 resize: none;
             }
-            #pmic {
+            #pmc {
                 text-align: center;
             }
             option {
@@ -28,19 +28,41 @@
     </head>
     <body>
         <div id="article-text">
-            <h3>Excerpt from {{ id }}</h3>
-            <textarea rows="10" cols="150">
-                {{ message }}
-            </textarea>
+            <h3 id = "pmc">Excerpt from {{ form.id }}</h3>
+           <textarea rows="10" cols="150">
+               {{ message }}
+           </textarea>
         </div>
-        <div id="article-candidates">
-            <form
-            <select name="select-candidates" multiple size="5">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class=flashes>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        <form action="" method="post">
+            {{ form.hidden_tag() }}
+            {{ form.candidates(size=10, multiple="multiple") }}
+<!--                {{ form.candidates }}-->
+            </div>
+            <p>{{ form.submit() }}</p>
+        </form>
+<!--        <div id="article-text">-->
 
-                {% for c in candidates %}
-                    <option value="{{c}}">{{c}}</option>
-                {% endfor %}
-            </select>
-        </div>
+<!--            <textarea rows="10" cols="150">-->
+<!--                {{ message }}-->
+<!--            </textarea>-->
+<!--        </div>-->
+<!--        <div id="article-candidates">-->
+
+<!--            <select name="select-candidates" multiple size="5">-->
+
+<!--                {% for c in candidates %}-->
+<!--                    <option value="{{c}}">{{c}}</option>-->
+<!--                {% endfor %}-->
+<!--            </select>-->
+<!--        </div>-->
     </body>
 </html>
