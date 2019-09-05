@@ -36,3 +36,10 @@ def get_random_article():
     idx = random.randint(0, len(ids) -1)
     found = articles.get(ids[idx])
     return (ids[idx], found)
+
+
+def make_choices(candidates):
+	choices = []
+	for counter in range(len(candidates)):
+		choices.append((counter, candidates[counter]))
+	return choices
