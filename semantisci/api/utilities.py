@@ -31,7 +31,8 @@ def get_random_article():
     articles = get_text(resp_path)
     if not articles:
         return None
-    articles = list(articles.values())
+    ids = list(articles.keys())
 
-    idx = random.randint(0, len(articles) -1)
-    return articles[idx]
+    idx = random.randint(0, len(ids) -1)
+    found = articles.get(ids[idx])
+    return (ids[idx], found)

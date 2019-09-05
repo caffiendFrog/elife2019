@@ -9,12 +9,12 @@ from .utilities import get_random_article
 
 @api.route('/abstract/', methods = ['GET'])
 def display_article():
-    article = get_random_article()
+    id, article = get_random_article()
     text = article.get('text', None)
     candidates = article.get('candidates', None)
-    print (text, candidates)
+    return render_template('index.html', id = id, message = text, candidates = candidates)
     
 
 @api.route('/validate', methods = ['POST'])
 def validate_equipment():
-    pass    
+    pass
