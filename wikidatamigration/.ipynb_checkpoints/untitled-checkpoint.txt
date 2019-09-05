@@ -1,0 +1,30 @@
+"GC Isolink", gas chromatograph, Thermo Scientific
+
+CREATE
+LAST|Len|"GC Isolink"
+LAST|Den|"equipment for gas chromatography manufactured by Thermo Fisher Scientific"
+LAST|P178|Q643674
+LAST|P31|Q67145730
+
+item created: Q67145812
+
+
+"Iatroscan MK-6", gas chromatograph, NTS Instruments
+
+CREATE
+LAST|Len|"Iatroscan MK-6"
+LAST|Den|"equipment for gas chromatography manufactured by NTS Instruments"
+LAST|P178|Q67145818
+LAST|P31|Q67145730
+
+item created: Q67145820
+
+"6890N", gas chromatograph, Agilent
+
+CREATE
+LAST|Len|"6890N"
+LAST|Den|"equipment for gas chromatography manufactured by Agilent"
+LAST|P178|Q393762
+LAST|P31|Q67145730
+
+item created: Q67145814
