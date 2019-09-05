@@ -1,9 +1,0 @@
-"HP6890", gas chromatograph, Agilent
-
-CREATE
-LAST|Len|"HP6890"
-LAST|Den|"equipment for gas chromatography manufactured by Agilent"
-LAST|P178|Q393762
-LAST|P31|Q67145730
-
-item created: Q67145763
