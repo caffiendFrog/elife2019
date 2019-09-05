@@ -1,0 +1,20 @@
+done	instrument	Q-number for instruments	instrument type	Q-number for instrument types	manufacturer	Q-number for manufacturer	article where it was mentioned (P4510)
+							
+yes	HP6890	Q67145763	gas chromatograph	Q67145730	Agilent	Q393762	PMC4391421
+yes	HP5973	Q67145846	mass spectrometrer	Q3966586	Agilent	Q393762	PMC4391421
+yes	QP-5000	Q67146252	gas chromatographer and mass spectrometer	Q67145839	Shimadzu	Q517117	PMC5080681, PMC5237462
+no	CW-2000		ultrasonic-microwave cooperative extractor/reactor"				PMC5080681
+no	Heidolph OB2000 VV2000		rotary evaporator		Heidolph	Q5699017	PMC5080681
+no	Jenway 7315		UV visible spectrophotometer		Jenway		PMC5080681
+no	Radwag, AS 220/c/2		balance				PMC5080681
+							
+yes	Delta V-EA/IRMS	Q67145858	mass spectroscopy system	Q3966586	Thermo Scientific	Q643674	eagle-i list
+yes	GC Isolink		gas chromatographer	Q67145730	Thermo Scientific	Q643674	eagle-i list
+yes	Iatroscan MK-6		gas chromatography system	Q67145730	NTS Instruments		eagle-i list
+yes	6890N		gas chromatography system	Q67145730	Agilent	Q393762	eagle-i list
+yes	DeltaPlus XP	Q67145847	mass spectrometry system	Q3966586	Thermo Scientific	Q643674	eagle-i list
+yes	Delta V-GCRMS	Q67145851	gas chromatographer and mass spectrometer	Q67145839	Thermo Scientific	Q643674	eagle-i list
+no	GCMS-TQ8050 NX		gas chromatographer and mass spectrometer	Q67145839	Shimadzu	Q517117	paper corpus
+no	GCMS-TQ8040 NX		gas chromatographer and mass spectrometer	Q67145839	Shimadzu	Q517117	paper corpus
+no	GCMS-QP2020 NX		gas chromatographer and mass spectrometer	Q67145839	Shimadzu	Q517117	paper corpus
+no	GCMS-QP2010 SE		gas chromatographer and mass spectrometer	Q67145839	Shimadzu	Q517117	paper corpus
