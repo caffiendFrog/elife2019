@@ -13,6 +13,10 @@
                 var y = document.getElementsById("choose");
                 y.classList.add("active")
 }
+            function toggleChosen() {
+                var z = document.getElementById("chosen")
+                z.style.display = "inline-block"            
+            }
         </script>
         <style>
             #article-text {
@@ -45,9 +49,9 @@
 /*             #choose {
                 display: none;
             } */
-            #chosen {
+/*             #chosen {
                 display: none;
-            }
+            } */
             select#candidates {
                 border-color: darkblue;
                 overflow: hidden;
@@ -71,11 +75,11 @@
             {% endif %}
         {% endwith %}
 
-        <form method="post">
+        <form action="/api/validate" method="post">
             {{ form.hidden_tag() }}
             <div id = "content">
                         <div id="article-text">
-                            <h3>Excerpt from {{ form.id }}</h3>
+                            <h3 id = "pmc">Excerpt from {{ form.id }}</h3>
                             <textarea rows="10" cols="150"> {{ form.text }} </textarea>
                         </div>
                     <p id = "choose" >Click here if there are instruments in the excerpt:
@@ -83,12 +87,19 @@
                     <div id = "possible">
                         <p id="article-candidates" style="display: none;">Here is a list of possible instruments in the excerpt, please select all the ones you see:</p>
                         <div style="display: inline-block; margin: 20px 20px;">{{ form.candidates(size=10, multiple="multiple") }}</div>
-                    <p>{{ form.submit() }}</p>
+                    <p onclick="toggleChosen()">{{ form.submit() }}</p>
                     </div>
                     <div id = "chosen">
                         <p>You've chosen the following instruments!</p>
-                        <div style="display: inline-block;">{{ form.candidates(size=10, multiple="multiple") }}</div>
+                        <div style="display: inline-block;">
+                            <ul>
+                                <li>Clevenger Apparatus</li>
+                                <li>Agilent 7890A</li>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
+
 
                 
             </div>
