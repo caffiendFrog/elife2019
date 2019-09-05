@@ -25,7 +25,7 @@ def display_article():
 
 @api.route('/validate', methods = ['POST'])
 def validate_equipment():
-    pass
+    form = CandidateValidationForm()
 
 
 class CandidateValidationForm(FlaskForm):
