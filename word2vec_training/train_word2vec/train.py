@@ -16,7 +16,6 @@ def read_all_preprocessed_files ():
             tokenized_list = nltk.word_tokenize(file_reader.readlines())
             tokenized_list = [word.strip() for word in tokenized_list if word not in stop_words2]
             wordvec_list.append(tokenized_list)
-
     return wordvec_list
 
 def train_gensim_word2vec(list):
