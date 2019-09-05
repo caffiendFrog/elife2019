@@ -1,0 +1,32 @@
+Eagle-i ontology for gas chromatographs from https://www.ebi.ac.uk/ols/ontologies/ero/terms?iri=http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FOBI_0000542
+
+
+quickstatements code: 
+
+CREATE
+LAST|Len|"material separation instrument"
+LAST|Aen|"material separation equipment"
+LAST|Den|"equipment for separating molecules"
+LAST|P279|Q3099911
+
+item created: Q67145726
+
+CREATE
+LAST|Len|"chromatography equipment"
+LAST|Aen|"chromatography instrument"
+LAST|Den|"analytical equipment for separating molecules by chromatography"
+LAST|P279|Q67145726
+
+item created: Q67145736
+
+
+CREATE
+LAST|Len|"gas chromatography equipment"
+LAST|Aen|"gas chromatography instrument"
+LAST
+LAST|Den|"analytical equipment for separating gas molecules by chromatography"
+LAST|P279|Q67145730
+
+item created: Q67145730
+
+
