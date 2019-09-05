@@ -22,23 +22,15 @@ for filename in filenames:
     if "PMC" in filename:
         try:
             with open(home+filename+"/scholarly.html", encoding="utf8") as f:
-                #match1 = re.compile(r'using a ((\w+ ){3})')
-                #match2= re.compile(r'with a ((\w+ ){3})')
-                #" with a " " in a "
                 magicList=[" using a ","were used: ", "We used ", " using ",
                            " performed by ", "carried out by ", " via ", " equipped with a ",
                            "maintained on ", " fitted with a ", "was done using a "]
                 matchList=[]
-                #candidatesList=[]
                 for it in magicList:
                     match= re.compile(re.escape(it)+ r'((\w+ ){3})')
                     matchList.append(match)
                     match2=re.compile(re.escape(it)+ r'((\w+ ){4})')
                     matchList.append(match2)
-                    #match3=re.compile(r'HP [+\d]')
-                    #matchList.append(match3)
-                    #match4= re.compile(r'HP-+\d')
-                    #matchList.append(match4)
                 for line in f:
                     if any(word in line for word in magicList):
                         for match in matchList:
