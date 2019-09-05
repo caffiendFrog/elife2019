@@ -4,7 +4,7 @@
         <title>SemantiSci</title>
         <script>
             function toggleCandidates() {
-                var x = document.getElementById("candidates-list");
+                var x = document.getElementById("article-candidates");
                 if (x.style.display === "block") {
                     x.style.display = "none";
                 } else {
@@ -51,7 +51,7 @@
             {{ form.hidden_tag() }}
             <table>
                 <tr>
-                    <td>
+                    <td align="center">
                         <div id="article-text">
                             <h3>Excerpt from {{ form.id }}</h3>
                             <textarea rows="10" cols="150"> {{ form.text }} </textarea>
@@ -59,22 +59,26 @@
                     </td>
                 </tr>
 
-            <div id="article-candidates">
+
                 <tr>
-                    <td align="right">Click here if there are instruments in the excerpt:</td>
-                    <td align="left"><div id="has-instruments" onclick="toggleCandidates()">{{ form.has_instruments }}</div>
-                </td>
+                    <td>
+                        Click here if there are instruments in the excerpt:
+                        <div id="has-instruments" onclick="toggleCandidates()" style="display: inline-block;">{{ form.has_instruments }}</div>
+                    </td>
                 </tr>
-                <tr><td>
-                <div id="candidates-list" style="display: none;">
-                    Here is a list of possible instruments in the excerpt, please select all the ones you see:
-                    {{ form.candidates(size=10, multiple="multiple") }}
-                </div>
-                </td></tr>
-            </div>
-                <tr><td>
-            <p>{{ form.submit() }}</p>
-                </td></tr>
+                <tr>
+                    <td valign="middle">
+                        <div id="article-candidates" style="display: none;">
+                            Here is a list of possible instruments in the excerpt, please select all the ones you see:
+                            <div style="display: inline-block;">{{ form.candidates(size=10, multiple="multiple") }}</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>{{ form.submit() }}</p>
+                    </td>
+                </tr>
             </table>
         </form>
     </body>
