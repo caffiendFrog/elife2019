@@ -4,12 +4,14 @@
         <title>SemantiSci</title>
         <script>
             function toggleCandidates() {
-                var x = document.getElementById("article-candidates");
+                var x = document.getElementById("possible");
                 if (x.style.display === "block") {
                     x.style.display = "none";
                 } else {
                     x.style.display = "block";
                 }
+                var y = document.getElementsById("choose");
+                y.classList.add("active")
 }
         </script>
         <style>
@@ -34,6 +36,28 @@
                 display: block;
                 text-align: center;
             }
+            #tables {
+                display: inline-block;
+            }
+            #possible {
+                display: none;
+            }
+/*             #choose {
+                display: none;
+            } */
+            #chosen {
+                display: none;
+            }
+            select#candidates {
+                border-color: darkblue;
+                overflow: hidden;
+                width: auto;
+                padding: 10px 30px;
+            }
+            p {
+                text-align: center;
+                display: block;
+            }
         </style>
     </head>
     <body>
@@ -47,39 +71,27 @@
             {% endif %}
         {% endwith %}
 
-        <form action="/api/validate" method="post">
+        <form method="post">
             {{ form.hidden_tag() }}
-            <table>
-                <tr>
-                    <td align="center">
+            <div id = "content">
                         <div id="article-text">
                             <h3>Excerpt from {{ form.id }}</h3>
                             <textarea rows="10" cols="150"> {{ form.text }} </textarea>
                         </div>
-                    </td>
-                </tr>
+                    <p id = "choose" >Click here if there are instruments in the excerpt:
+                    <span id = "has-instruments" onclick="toggleCandidates()" style="display: inline-block;">{{ form.has_instruments }}</p>
+                    <div id = "possible">
+                        <p id="article-candidates" style="display: none;">Here is a list of possible instruments in the excerpt, please select all the ones you see:</p>
+                        <div style="display: inline-block; margin: 20px 20px;">{{ form.candidates(size=10, multiple="multiple") }}</div>
+                    <p>{{ form.submit() }}</p>
+                    </div>
+                    <div id = "chosen">
+                        <p>You've chosen the following instruments!</p>
+                        <div style="display: inline-block;">{{ form.candidates(size=10, multiple="multiple") }}</div>
+                    </div>
 
-
-                <tr>
-                    <td>
-                        Click here if there are instruments in the excerpt:
-                        <div id="has-instruments" onclick="toggleCandidates()" style="display: inline-block;">{{ form.has_instruments }}</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td valign="middle">
-                        <div id="article-candidates" style="display: none;">
-                            Here is a list of possible instruments in the excerpt, please select all the ones you see:
-                            <div style="display: inline-block;">{{ form.candidates(size=10, multiple="multiple") }}</div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>{{ form.submit() }}</p>
-                    </td>
-                </tr>
-            </table>
+                
+            </div>
         </form>
     </body>
 </html>
