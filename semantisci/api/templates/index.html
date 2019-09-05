@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SemantiSci</title>
+        <style>
+            #article-text {
+                margin-left: 200px;
+            }
+            textarea {
+                border: 2px solid darkblue;
+                overflow-y: scroll;
+                height: 200px;
+                font-size: 13px;
+                resize: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="article-text">
+            <h3>Excerpt from {{ id }}</h3>
+            <textarea rows="10" cols="150">
+                {{ message }}
+            </textarea>
+        </div>
+        <div id="article-candidates">
+            <form
+            <select name="select-candidates" multiple size="5">
+
+                {% for c in candidates %}
+                    <option value="{{c}}">{{c}}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </body>
+</html>
