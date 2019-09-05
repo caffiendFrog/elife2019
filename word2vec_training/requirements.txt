@@ -1,2 +1,6 @@
 nltk
-gensim
+gensin
+spacy
+Tokenizer
+networkx
+node2vec
