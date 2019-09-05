@@ -20,7 +20,7 @@ def display_article():
     form.id = id
     form.candidates.choices = make_choices(candidates)
     form.text = text
-    return render_template('index.html', form=form)
+    return render_template('index.html', id = id, candidates = candidates, message = text, form=form)
     
 
 @api.route('/validate', methods = ['POST'])
