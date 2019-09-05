@@ -1,10 +1,11 @@
-from flask import Flask, request, current_app, render_template
-from flask_wtf import FlaskForm
-from wtforms.fields import StringField, TextAreaField, SelectMultipleField, SubmitField
 import json
 import requests
 import os
 import random
+
+from flask import Flask, request, current_app, render_template
+from flask_wtf import FlaskForm
+from wtforms.fields import StringField, TextAreaField, SelectMultipleField, SubmitField, BooleanField
 
 from . import api
 from .utilities import get_random_article, make_choices
@@ -24,11 +25,12 @@ def display_article():
 
 @api.route('/validate', methods = ['POST'])
 def validate_equipment():
-    pass
+    form = CandidateValidationForm()
 
 
 class CandidateValidationForm(FlaskForm):
     id = StringField('Article ID', render_kw={'readonly': True})
+    has_instruments = BooleanField()
     text = TextAreaField('Article excerpt')
     candidates = SelectMultipleField('Candidates')
     submit = SubmitField('Confirm')

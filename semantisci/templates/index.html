@@ -2,6 +2,16 @@
 <html>
     <head>
         <title>SemantiSci</title>
+        <script>
+            function toggleCandidates() {
+                var x = document.getElementById("article-candidates");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+}
+        </script>
         <style>
             #article-text {
                 margin: 10px 40px;
@@ -27,12 +37,6 @@
         </style>
     </head>
     <body>
-        <div id="article-text">
-            <h3 id = "pmc">Excerpt from {{ form.id }}</h3>
-           <textarea rows="10" cols="150">
-               {{ message }}
-           </textarea>
-        </div>
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 <ul class=flashes>
@@ -42,27 +46,40 @@
                 </ul>
             {% endif %}
         {% endwith %}
-        <form action="" method="post">
+
+        <form action="/api/validate" method="post">
             {{ form.hidden_tag() }}
-            {{ form.candidates(size=10, multiple="multiple") }}
-<!--                {{ form.candidates }}-->
-            </div>
-            <p>{{ form.submit() }}</p>
+            <table>
+                <tr>
+                    <td align="center">
+                        <div id="article-text">
+                            <h3>Excerpt from {{ form.id }}</h3>
+                            <textarea rows="10" cols="150"> {{ form.text }} </textarea>
+                        </div>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        Click here if there are instruments in the excerpt:
+                        <div id="has-instruments" onclick="toggleCandidates()" style="display: inline-block;">{{ form.has_instruments }}</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="middle">
+                        <div id="article-candidates" style="display: none;">
+                            Here is a list of possible instruments in the excerpt, please select all the ones you see:
+                            <div style="display: inline-block;">{{ form.candidates(size=10, multiple="multiple") }}</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>{{ form.submit() }}</p>
+                    </td>
+                </tr>
+            </table>
         </form>
-<!--        <div id="article-text">-->
-
-<!--            <textarea rows="10" cols="150">-->
-<!--                {{ message }}-->
-<!--            </textarea>-->
-<!--        </div>-->
-<!--        <div id="article-candidates">-->
-
-<!--            <select name="select-candidates" multiple size="5">-->
-
-<!--                {% for c in candidates %}-->
-<!--                    <option value="{{c}}">{{c}}</option>-->
-<!--                {% endfor %}-->
-<!--            </select>-->
-<!--        </div>-->
     </body>
 </html>

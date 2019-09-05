@@ -1,0 +1,45 @@
+"HP5973", mass spectrometer, Agilent
+
+CREATE
+LAST|Len|"HP5973"
+LAST|Den|"equipment for mass spectrometry manufactured by Agilent"
+LAST|P178|Q393762
+LAST|P31|Q3966586
+
+item created: Q67145846
+
+
+"DeltaPlus XP", mass spectrometer, Thermo Scientific
+
+CREATE
+LAST|Len|"DeltaPlus XP"
+LAST|Den|"equipment for mass spectrometry manufactured by Thermo Fisher Scientific"
+LAST|P178|Q643674
+LAST|P31|Q3966586
+
+item created: Q67145847
+
+
+"Delta V-GCRMS", mass spectrometer, Thermo Scientific
+
+CREATE
+LAST|Len|"Delta V-GCRMS"
+LAST|Den|"equipment for mass spectrometry manufactured by Thermo Fisher Scientific"
+LAST|P178|Q643674
+LAST|P31|Q3966586
+
+item created:Q67145851
+
+"Delta V-EA/IRMS", mass spectrometer, Thermo Scientific
+
+CREATE
+LAST|Len|"Delta V-EA/IRMS"
+LAST|Den|"equipment for mass spectrometry manufactured by Thermo Fisher Scientific"
+LAST|P178|Q643674
+LAST|P31|Q3966586
+
+item created:Q67145858
+
+
+
+
