@@ -1,14 +1,7 @@
 from gensim.models import KeyedVectors
 from config import WORD2VEC_MODEL_LOCATION, EQUIPMENT_FILE_NAME, SINGLE_WORD_DISTANCE_THRESHOLD, SINGLE_PHRASE_DISTANCE_THRESHOLD
 import spacy
-import copy
-from spacy.tokenizer import Tokenizer
 from nltk.corpus import stopwords
-
-
-from spacy.util import compile_prefix_regex, compile_infix_regex, compile_suffix_regex
-
-# Load vectors directly from the file
 
 
 model =  KeyedVectors.load_word2vec_format(WORD2VEC_MODEL_LOCATION, binary=True)
@@ -16,9 +9,9 @@ nlp = spacy.load("en")
 stop_words = stopwords.words('english')
 stop_words.extend(["'"'', "''", ".",")", "(", "&","\n", '', '_', '\\', '/', '-'])
 
-def get_most_similar(word):
+def get_most_similar(word, number_of_terms=1):
     try:
-        return model.most_similar(word)
+        return model.most_similar(word, topn=70)
     except:
         return
 
@@ -37,12 +30,25 @@ def load_all_equipment_names():
     return tokenized_equimpment
 
 
+def get_phrase_in_text(document_text, all_equipments):
+    noun_phrase_list = get_all_noun_phrases(document_text)
+    noun_phrase_suggestion = []
+    for noun_phrase in noun_phrase_list:
+        sentence = nlp(noun_phrase)
+        noun_phrase_split = [word.text.strip().lower() for word in sentence if word.text.strip().lower() not in stop_words]
+
+        if compare_noun_phrase_to_equipment_name_list(noun_phrase_split, all_equipments):
+            noun_phrase_suggestion.append(noun_phrase)
+
+    return noun_phrase_list
+
+
 def get_all_noun_phrases(document_text):
     doc = nlp(document_text)
     try:
         noun_phrases = []
         for np in doc.noun_chunks:
-            noun_phrases.append(np)
+            noun_phrases.append(np.text)
         return noun_phrases
     except:
         return document_text
