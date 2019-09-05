@@ -3,7 +3,6 @@ from config import WORD2VEC_MODEL_LOCATION, EQUIPMENT_FILE_NAME, SINGLE_WORD_DIS
 import spacy
 from nltk.corpus import stopwords
 
-
 model =  KeyedVectors.load_word2vec_format(WORD2VEC_MODEL_LOCATION, binary=True)
 nlp = spacy.load("en")
 stop_words = stopwords.words('english')
